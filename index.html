@@ -63,34 +63,25 @@
             from, to { border-color: transparent; }
             50% { border-color: #ff6b6b; }
         }
-        .hero p {
-            font-size: 1.2em;
-            margin-bottom: 30px;
-        }
-        .button-group {
-            display: flex;
-            gap: 20px;
-        }
-        .button-group a {
-            padding: 10px 20px;
-            background: #ff6b6b;
-            color: #ffffff;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-        .button-group a:hover {
-            background: #ff4c4c;
-        }
         section {
             padding: 100px 20px;
         }
-        .projects {
+        .skills, .projects, .certifications, .contact {
             background: #1e1e1e;
             border-top: 1px solid #333;
             border-bottom: 1px solid #333;
+            margin-bottom: 40px;
         }
-        .project-item {
+        h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .section-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .project-item, .certification-item {
             margin: 20px 0;
             padding: 20px;
             background: #2c2c2c;
@@ -98,21 +89,36 @@
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s, box-shadow 0.3s;
         }
-        .project-item:hover {
+        .project-item:hover, .certification-item:hover {
             transform: translateY(-5px);
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
         }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #1e1e1e;
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
         }
-        .contact a {
+        .contact-form button {
+            padding: 10px 20px;
+            background: #ff6b6b;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .contact-form button:hover {
+            background: #ff4c4c;
+        }
+        .social-icons a {
+            margin: 0 10px;
             color: #ff6b6b;
-            text-decoration: none;
+            font-size: 1.5em;
             transition: color 0.3s;
         }
-        .contact a:hover {
+        .social-icons a:hover {
             color: #ffffff;
         }
     </style>
@@ -122,7 +128,9 @@
         <div class="logo"><strong>Bala Pushpaja</strong></div>
         <nav>
             <a href="#about">About</a>
+            <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
+            <a href="#certifications">Certifications</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
@@ -130,33 +138,71 @@
     <section class="hero">
         <h1>Hi, I'm Bala Pushpaja</h1>
         <p>A passionate developer and designer focused on creating beautiful web experiences.</p>
-        <div class="button-group">
-            <a href="#contact">Get in Touch</a>
-            <a href="#projects">See My Work</a>
-        </div>
     </section>
     
     <section id="about">
         <h2>About Me</h2>
-        <p>Hi! I'm Bala Pushpaja, an aspiring software engineer with a passion for creating elegant and functional web applications. I love learning new technologies and constantly improving my skills.My  grades tell my history but my projects tell my future.</p>
+        <div class="section-content">
+            <p>Hi! I'm Bala Pushpaja, an aspiring software engineer with a passion for creating elegant and functional web applications. I love learning new technologies and constantly improving my skills. My grades tell about my history but my projects tell about my future.</p>
+        </div>
+    </section>
+    
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <div class="section-content">
+            <ul>
+                <li><strong>Programming:</strong> Java, Python, DSA</li>
+                <li><strong>Blockchain Basics:</strong> Smart Contracts, Decentralized Apps</li>
+                <li><strong>Tools:</strong> Git, GitHub</li>
+                <li><strong>Soft Skills:</strong> Teamwork, Leadership, Problem-solving</li>
+            </ul>
+        </div>
     </section>
     
     <section id="projects" class="projects">
         <h2>Projects</h2>
-        <div class="project-item">
-            <h3>Project 1: Music Recommendation System</h3>
-            <p>A machine learning project that recommends music based on user preferences.</p>
+        <div class="section-content">
+            <div class="project-item">
+                <h3>Music Recommendation System</h3>
+                <p>A machine learning project that recommends music based on user preferences.</p>
+                <p><a href="#">GitHub Link</a> | <a href="#">Live Demo</a></p>
+            </div>
+            <div class="project-item">
+                <h3>Meme Repost Page</h3>
+                <p>An Instagram page for reposting and sharing trending memes.</p>
+                <p><a href="#">Instagram Page</a></p>
+            </div>
         </div>
-        <div class="project-item">
-            <h3>Project 2: Meme Repost Page</h3>
-            <p>An Instagram page for reposting and sharing trending memes.</p>
+    </section>
+    
+    <section id="certifications" class="certifications">
+        <h2>Certifications</h2>
+        <div class="section-content">
+            <div class="certification-item">
+                <h3>Google Cybersecurity Professional Certificate</h3>
+                <p>A comprehensive course on cybersecurity fundamentals.</p>
+            </div>
+            <div class="certification-item">
+                <h3>Blockchain Basics - LinkedIn Learning</h3>
+                <p>An introductory course on blockchain technology and its applications.</p>
+            </div>
         </div>
     </section>
     
     <section id="contact" class="contact">
         <h2>Contact</h2>
-        <p>Email: <a href="mailto:balapushpaja@gmail.com">balapushpaja@gmail.com</a></p>
-        <p>LinkedIn: <a href="#">linkedin.com/in/pandrankibalapushpaja</a></p>
+        <div class="section-content">
+            <form class="contact-form">
+                <input type="text" placeholder="Bala pushpaja" required>
+                <input type="email" placeholder="balapushpaja@gmail.com" required>
+                <textarea placeholder="fell free to contact" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <div class="social-icons">
+                <a href="#">GitHub</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
     </section>
     
     <footer>
