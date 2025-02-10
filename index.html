@@ -10,7 +10,7 @@
             margin: 0;
             padding: 0;
             font-family: 'Poppins', sans-serif;
-            background-color: #121212;
+            background: linear-gradient(135deg, #1e1e1e, #121212);
             color: #ffffff;
             scroll-behavior: smooth;
         }
@@ -20,7 +20,7 @@
             left: 0;
             width: 100%;
             padding: 20px;
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(0, 0, 0, 0.9);
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
             z-index: 1000;
             display: flex;
@@ -44,8 +44,8 @@
             align-items: center;
             justify-content: center;
             background: url('https://via.placeholder.com/1600x900') no-repeat center center/cover;
-            color: #ffffff;
             text-align: center;
+            color: #ffffff;
         }
         .hero h1 {
             font-size: 3em;
@@ -65,12 +65,6 @@
         }
         section {
             padding: 100px 20px;
-        }
-        .skills, .projects, .certifications, .contact {
-            background: #1e1e1e;
-            border-top: 1px solid #333;
-            border-bottom: 1px solid #333;
-            margin-bottom: 40px;
         }
         h2 {
             text-align: center;
@@ -93,24 +87,20 @@
             transform: translateY(-5px);
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
         }
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 10px;
+        .contact-info {
+            text-align: center;
+        }
+        .contact-info p {
+            font-size: 1.2em;
             margin: 10px 0;
-            border: none;
-            border-radius: 5px;
         }
-        .contact-form button {
-            padding: 10px 20px;
-            background: #ff6b6b;
+        .contact-info a {
+            color: #ff6b6b;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .contact-info a:hover {
             color: #ffffff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-        .contact-form button:hover {
-            background: #ff4c4c;
         }
         .social-icons a {
             margin: 0 10px;
@@ -120,6 +110,24 @@
         }
         .social-icons a:hover {
             color: #ffffff;
+        }
+        .resume-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #ff6b6b;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .resume-button:hover {
+            background: #ff4c4c;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.9);
+            border-top: 1px solid #333;
         }
     </style>
 </head>
@@ -138,12 +146,13 @@
     <section class="hero">
         <h1>Hi, I'm Bala Pushpaja</h1>
         <p>A passionate developer and designer focused on creating beautiful web experiences.</p>
+        <a href="#" class="resume-button">Download Resume</a>
     </section>
     
     <section id="about">
         <h2>About Me</h2>
         <div class="section-content">
-            <p>Hi! I'm Bala Pushpaja, an aspiring software engineer with a passion for creating elegant and functional web applications. I love learning new technologies and constantly improving my skills.</p>
+            <p>Hi! I'm Bala Pushpaja, an aspiring software engineer with a passion for creating elegant and functional web applications.My grades tell about my history but my projects tells about my future.</p>
         </div>
     </section>
     
@@ -191,13 +200,9 @@
     
     <section id="contact" class="contact">
         <h2>Contact</h2>
-        <div class="section-content">
-            <form class="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" rows="5" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
+        <div class="section-content contact-info">
+            <p><strong>Email:</strong> balapushpaja@gmail.com</p>
+            <p><strong>Phone:</strong> +91 999999999</p>
             <div class="social-icons">
                 <a href="#">GitHub</a>
                 <a href="#">LinkedIn</a>
