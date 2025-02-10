@@ -10,8 +10,8 @@
             margin: 0;
             padding: 0;
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #1e1e1e, #121212);
-            color: #ffffff;
+            background: #1b1b2f; /* Dark navy */
+            color: #f1f1f1; /* Off-white */
             scroll-behavior: smooth;
         }
         header {
@@ -20,7 +20,7 @@
             left: 0;
             width: 100%;
             padding: 20px;
-            background: rgba(0, 0, 0, 0.9);
+            background: rgba(27, 27, 47, 0.9);
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
             z-index: 1000;
             display: flex;
@@ -29,13 +29,13 @@
         }
         nav a {
             margin: 0 15px;
-            color: #ffffff;
+            color: #a29bfe; /* Soft purple */
             text-decoration: none;
             font-weight: bold;
             transition: color 0.3s;
         }
         nav a:hover {
-            color: #ff6b6b;
+            color: #ff6bcb; /* Bright pink */
         }
         .hero {
             height: 100vh;
@@ -43,7 +43,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            background: url('https://via.placeholder.com/1600x900') no-repeat center center/cover;
+            background: linear-gradient(135deg, #2d1e40, #3a275d); /* Deep purples */
             text-align: center;
             color: #ffffff;
         }
@@ -53,7 +53,7 @@
             animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
             white-space: nowrap;
             overflow: hidden;
-            border-right: 2px solid #ff6b6b;
+            border-right: 2px solid #ff6bcb;
         }
         @keyframes typing {
             from { width: 0; }
@@ -61,7 +61,7 @@
         }
         @keyframes blink-caret {
             from, to { border-color: transparent; }
-            50% { border-color: #ff6b6b; }
+            50% { border-color: #ff6bcb; }
         }
         section {
             padding: 100px 20px;
@@ -70,6 +70,7 @@
             text-align: center;
             font-size: 2.5em;
             margin-bottom: 20px;
+            color: #a29bfe;
         }
         .section-content {
             max-width: 800px;
@@ -78,7 +79,7 @@
         .project-item, .certification-item {
             margin: 20px 0;
             padding: 20px;
-            background: #2c2c2c;
+            background: rgba(50, 50, 70, 0.8);
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s, box-shadow 0.3s;
@@ -95,7 +96,7 @@
             margin: 10px 0;
         }
         .contact-info a {
-            color: #ff6b6b;
+            color: #ff6bcb;
             text-decoration: none;
             transition: color 0.3s;
         }
@@ -104,7 +105,7 @@
         }
         .social-icons a {
             margin: 0 10px;
-            color: #ff6b6b;
+            color: #ff6bcb;
             font-size: 1.5em;
             transition: color 0.3s;
         }
@@ -114,20 +115,21 @@
         .resume-button {
             display: inline-block;
             padding: 10px 20px;
-            background: #ff6b6b;
+            background: #ff6bcb;
             color: #ffffff;
             text-decoration: none;
             border-radius: 5px;
             transition: background 0.3s;
         }
         .resume-button:hover {
-            background: #ff4c4c;
+            background: #e056b8;
         }
         footer {
             text-align: center;
             padding: 20px;
-            background: rgba(0, 0, 0, 0.9);
+            background: rgba(27, 27, 47, 0.9);
             border-top: 1px solid #333;
+            color: #f1f1f1;
         }
     </style>
 </head>
@@ -152,11 +154,11 @@
     <section id="about">
         <h2>About Me</h2>
         <div class="section-content">
-            <p>Hi! I'm Bala Pushpaja, an aspiring software engineer with a passion for creating elegant and functional web applications.My grades tell about my history but my projects tells about my future.</p>
+            <p>Hi! I'm Bala Pushpaja, an aspiring software engineer with a passion for creating elegant and functional web applications. I love learning new technologies and constantly improving my skills.</p>
         </div>
     </section>
     
-    <section id="skills" class="skills">
+    <section id="skills">
         <h2>Skills</h2>
         <div class="section-content">
             <ul>
@@ -168,7 +170,7 @@
         </div>
     </section>
     
-    <section id="projects" class="projects">
+    <section id="projects">
         <h2>Projects</h2>
         <div class="section-content">
             <div class="project-item">
@@ -184,7 +186,7 @@
         </div>
     </section>
     
-    <section id="certifications" class="certifications">
+    <section id="certifications">
         <h2>Certifications</h2>
         <div class="section-content">
             <div class="certification-item">
@@ -198,11 +200,11 @@
         </div>
     </section>
     
-    <section id="contact" class="contact">
+    <section id="contact">
         <h2>Contact</h2>
         <div class="section-content contact-info">
-            <p><strong>Email:</strong> balapushpaja@gmail.com</p>
-            <p><strong>Phone:</strong> +91 999999999</p>
+            <p><strong>Email:</strong> bala.pushpaja@example.com</p>
+            <p><strong>Phone:</strong> +91 98765 43210</p>
             <div class="social-icons">
                 <a href="#">GitHub</a>
                 <a href="#">LinkedIn</a>
